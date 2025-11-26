@@ -12,7 +12,7 @@
 
     {{ $eventStartDate := or .Site.Params.themes.event.startDate now | time }}
     {{ $eventEndDate := or .Site.Params.themes.event.endDate now | time }}
-    {{ $dayInSeconds := 6400 }}
+    {{ $dayInSeconds := 86400 }}
     {{ partial "sections/event-highlights.html" (
         dict
         "title" .Site.Params.themes.event.title
@@ -26,10 +26,9 @@
     }}
 
     {{- $tracks := slice }}
-    {{- range (where .Site.RegularPages "Section" "sessions").GroupByParam "track" }}
-        {{- $tracks = $tracks | append (.Key) }}
-    {{- end }}
-
+    {{- range (where .Site.RegularPages "Section" "sessions").GroupByParam "track" }} 
+    <!-- dodalem kod  -->
+      
     {{- if gt ($tracks | len) 1 }}
         {{- partial "sections/conference-tracks.html" (
             dict
