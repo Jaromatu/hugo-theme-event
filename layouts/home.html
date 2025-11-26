@@ -12,7 +12,7 @@
 
     {{ $eventStartDate := or .Site.Params.themes.event.startDate now | time }}
     {{ $eventEndDate := or .Site.Params.themes.event.endDate now | time }}
-    {{ $dayInSeconds := 86400 }}
+    {{ $dayInSeconds := 6400 }}
     {{ partial "sections/event-highlights.html" (
         dict
         "title" .Site.Params.themes.event.title
