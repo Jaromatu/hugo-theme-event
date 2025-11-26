@@ -28,7 +28,9 @@
     {{- $tracks := slice }}
     {{- range (where .Site.RegularPages "Section" "sessions").GroupByParam "track" }} 
     <!-- dodalem kod  -->
-      
+        {{- $tracks = $tracks | append (.Key) }}
+    {{- end }}
+
     {{- if gt ($tracks | len) 1 }}
         {{- partial "sections/conference-tracks.html" (
             dict
