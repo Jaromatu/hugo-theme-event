@@ -27,7 +27,6 @@
 
     {{- $tracks := slice }} 
     {{- range (where .Site.RegularPages "Section" "sessions").GroupByParam "track" }}
-    <!-- {{- range (.Site.RegularPages.GroupByParam "track") }} -->
         {{- $tracks = $tracks | append (.Key) }}
     {{- end }}
 
