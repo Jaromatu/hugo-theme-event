@@ -1,7 +1,7 @@
 languages:
     en:
         languageName: English
-       
+        disabled: true
         params:
             themes:
                 event:
@@ -20,7 +20,7 @@ languages:
                         More information about the event will be added soon. Stay tuned! 🎉
     de:
         languageName: Deutsch
-        disabled: true
+       
         params:
             themes:
                 event:
